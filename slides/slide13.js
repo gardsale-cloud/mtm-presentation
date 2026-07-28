@@ -1,9 +1,10 @@
 registerSlide(13, `
+
 <div class="slide-main slide-13-layout">
     <!-- Headline & Subtitle -->
     <section class="title-section">
         <h1 class="slide-title">
-            Важно не только сделать сайт.<br>
+            Важно не только сделать сайт. Убрать<br>
             <span class="accent-green">Важно иметь возможность быстро его менять</span>
         </h1>
         <p class="slide-subtitle">
@@ -73,4 +74,5 @@ registerSlide(13, `
         <p>Главное преимущество — не только новый внешний вид, а возможность быстрее улучшать продажи.</p>
     </section>
 </div>
+
 `);

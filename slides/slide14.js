@@ -1,10 +1,10 @@
 registerSlide(14, `
+
 <div class="slide-main slide-14-layout">
     <!-- Headline & Subtitle -->
     <section class="title-section">
         <h1 class="slide-title">
-            Предлагаю начать с пилотного проекта
-        </h1>
+            Предлагаю начать с пилотного проекта. Убрать</h1>
         <p class="slide-subtitle">
             Сначала проверяем новый подход на реальных посетителях. После этого принимаем решение о дальнейшем развитии.
         </p>
@@ -15,7 +15,7 @@ registerSlide(14, `
         <!-- Stage 1 -->
         <div class="stage-card stage-pilot">
             <h2 class="stage-card-title">1. Пилотный запуск</h2>
-            <div class="stage-price-tag" style="background: rgba(16,185,129,0.08); border: 1px dashed var(--color-accent-green); font-size: 0.9cqw;">В рамках текущей работы</div>
+            <div class="stage-price-tag" style="background: rgba(16, 185, 129, 0.08); border: 1px dashed var(--color-accent-green); font-size: 0.9cqw;">В рамках текущей работы</div>
             
             <ul class="stage-card-list">
                 <li>новая версия сайта размещается отдельно;</li>
@@ -64,4 +64,5 @@ registerSlide(14, `
         <p>Цель сотрудничества — не просто сделать новый сайт, а создать инструмент, который постоянно улучшается и помогает получать больше обращений.</p>
     </section>
 </div>
+
 `);

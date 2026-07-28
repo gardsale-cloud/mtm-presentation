@@ -1,4 +1,5 @@
 registerSlide(7, `
+
 <div class="slide-main slide-7-layout">
     <!-- Headline & Inline Explanation -->
     <section class="title-section">
@@ -7,7 +8,7 @@ registerSlide(7, `
             <span class="accent-green">Сайт ведет не к тому сценарию покупки</span>
         </h1>
         <p class="explanation-inline">
-            Покупатель строительных материалов редко готов сразу оформить заказ. Ему часто нужно:
+            Покупатель строительных материалов редко готов сразу оформить заказ на сайте. Ему часто нужно:
             узнать стоимость доставки <span class="bullet-dot">•</span>
             уточнить наличие <span class="bullet-dot">•</span>
             получить расчет количества <span class="bullet-dot">•</span>
@@ -30,9 +31,17 @@ registerSlide(7, `
                 <span class="flow-step-arrow">→</span>
                 <span class="flow-step-pill">Корзина</span>
                 <span class="flow-step-arrow">→</span>
-                <span class="flow-step-pill">Оформление</span>
+                <span class="flow-step-pill">
+
+
+
+<p class="p1">Требуется оформить заказ</p></span>
                 <span class="flow-step-arrow">→</span>
-                <span class="flow-step-pill" style="color: #D97706; background: rgba(217,119,6,0.05); border-color: rgba(217,119,6,0.15);">Уход без покупки?</span>
+                <span class="flow-step-pill" style="color: rgb(217, 119, 6); background: rgba(217, 119, 6, 0.05); border-color: rgba(217, 119, 6, 0.15);">
+
+
+
+<p class="p1">Не готов оформить заказ</p></span>
             </div>
 
             <!-- Screenshot placeholder 1 (Current Cart) -->
@@ -60,8 +69,8 @@ registerSlide(7, `
                         
                         <!-- Block with questions marks representing buyer doubts -->
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2px; padding: 2px; background: rgba(217,119,6,0.04); border: 1px dashed rgba(217,119,6,0.2); border-radius: 2px;">
-                            <span style="font-size: 5px; color: #D97706; font-weight: 700;">Вопросы по доставке и оплате?</span>
-                            <span style="font-size: 6px; font-weight: 800; color: #D97706;">?</span>
+                            <span style="font-size: 5px; color: rgb(217, 119, 6); font-weight: 700;">Вопросы по доставке и оплате?</span>
+                            <span style="font-size: 6px; font-weight: 800; color: rgb(217, 119, 6);">?</span>
                         </div>
                     </div>
                 </div>
@@ -85,7 +94,7 @@ registerSlide(7, `
                 <span class="flow-step-arrow">→</span>
                 <span class="flow-step-pill">Заявка на расчет</span>
                 <span class="flow-step-arrow">→</span>
-                <span class="flow-step-pill" style="color: var(--color-accent-green-dark); background: var(--color-accent-green-light); border-color: rgba(16,185,129,0.2);">Менеджер / Продажа</span>
+                <span class="flow-step-pill" style="color: var(--color-accent-green-dark); background: var(--color-accent-green-light); border-color: rgba(16, 185, 129, 0.2);">Менеджер / Продажа</span>
             </div>
 
             <!-- Screenshot placeholder 2 (Simple form) -->
@@ -110,7 +119,8 @@ registerSlide(7, `
 
     <!-- Bottom Highlighted Card -->
     <section class="highlight-conclusion-card">
-        <p>Сайт должен помогать начать диалог с покупателем, а не заставлять его принимать решение раньше времени.</p>
+        <p>Сайт должен помогать начать диалог с менеджером, а не заставлять покупателя самостоятельно принимать решение о заказе</p>
     </section>
 </div>
+
 `);

@@ -58,35 +58,35 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.cursor = 'default';
     });
 
-    const isLocal = window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-    if (isLocal) {
+    // Enable editing only if we are not on the production GitHub Pages URL
+    const isProduction = window.location.hostname.includes('github.io');
+    if (!isProduction) {
         // Make text editable (avoiding nested editable elements)
-        const allElements = document.querySelectorAll('.slide *');
         const editables = [];
+        const selectors = [
+            'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 
+            'p', 'li', 'td', 'th',
+            '.funnel-val', '.funnel-unit', '.funnel-title', '.funnel-desc',
+            '.flow-title', '.flow-desc',
+            '.pain-point-title', '.pain-point-desc',
+            '.problem-card-title', '.problem-card-desc',
+            '.analysis-title', '.analysis-desc',
+            '.scenario-tag-label',
+            '.screenshot-card-title',
+            '.col-card-title',
+            '.right-card-title',
+            '.right-card-text'
+        ];
 
-        // Helper to determine if an element is a text container
-        const isTextContainer = function(el) {
-            const excludedTags = ['SCRIPT', 'STYLE', 'SVG', 'PATH', 'IMG', 'BR', 'HR', 'INPUT', 'TEXTAREA'];
-            if (excludedTags.includes(el.tagName)) return false;
+        document.querySelectorAll('.slide *').forEach(el => {
+            if (el.closest('.footer-navigation, .technical-drawing')) return;
+            if (['SCRIPT', 'STYLE', 'SVG', 'PATH', 'IMG', 'BR', 'HR', 'INPUT', 'TEXTAREA', 'BUTTON'].includes(el.tagName)) return;
 
-            // Exclude footer navigation and technical drawing areas
-            if (el.closest('.footer-navigation, .technical-drawing')) return false;
+            // Check if it matches our list of target selectors OR is a leaf element containing text
+            const matchesSelector = selectors.some(sel => el.matches(sel));
+            const isLeafText = el.children.length === 0 && el.textContent.trim().length > 0;
 
-            // Check if element has any text nodes as direct children with actual content
-            let hasDirectText = false;
-            for (let i = 0; i < el.childNodes.length; i++) {
-                const node = el.childNodes[i];
-                if (node.nodeType === 3 && node.nodeValue && node.nodeValue.trim().length > 0) {
-                    hasDirectText = true;
-                    break;
-                }
-            }
-            
-            return hasDirectText;
-        };
-
-        allElements.forEach(el => {
-            if (isTextContainer(el) && el.tagName !== 'BUTTON') {
+            if (matchesSelector || isLeafText) {
                 editables.push(el);
             }
         });

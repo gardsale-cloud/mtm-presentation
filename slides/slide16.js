@@ -1,10 +1,10 @@
 registerSlide(16, `
+
 <div class="slide-main slide-16-layout">
     <!-- Headline & Subtitle -->
     <section class="title-section">
         <h1 class="slide-title">
-            Предлагаю начать с небольшого шага
-        </h1>
+            Предлагаю начать с небольшого шага. Убрать</h1>
         <p class="slide-subtitle">
             Не нужно сразу принимать решение о полном переходе. Сначала можно проверить новый подход на реальных посетителях.
         </p>
@@ -41,7 +41,8 @@ registerSlide(16, `
 
     <!-- Final Highlighted Call to Action -->
     <section class="highlight-conclusion-card" style="background: var(--color-primary-navy); border-color: var(--color-primary-navy);">
-        <p style="color: #FFF; font-weight: 700; font-size: 1.1cqw; letter-spacing: 0.02em;">Готов обсудить запуск пилотного проекта и следующие шаги.</p>
+        <p style="color: rgb(255, 255, 255); font-weight: 700; font-size: 1.1cqw; letter-spacing: 0.02em;">Готов обсудить запуск пилотного проекта и следующие шаги.</p>
     </section>
 </div>
+
 `);

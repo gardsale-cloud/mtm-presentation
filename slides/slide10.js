@@ -1,4 +1,5 @@
 registerSlide(10, `
+
 <div class="slide-main slide-10-layout">
     <!-- Headline & Subtitle -->
     <section class="title-section">
@@ -15,20 +16,20 @@ registerSlide(10, `
         <!-- Option 1 -->
         <div class="option-card">
             <h2 class="option-card-title">1. Оставить текущий сайт</h2>
-            <p class="option-card-desc">Продолжать работать с текущей системой и подрядчиком.</p>
+            <p class="option-card-desc">Оставить как есть</p>
             
             <div style="display: flex; flex-direction: column; gap: 1cqh; margin-top: auto;">
                 <div>
                     <h3 class="option-section-title title-pros">Плюсы</h3>
                     <ul class="option-list list-pros">
-                        <li>не требует больших изменений сейчас.</li>
+                        <li>не требует изменений.</li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="option-section-title title-cons">Минусы</h3>
                     <ul class="option-list list-cons">
-                        <li>скорость изменений зависит от текущих возможностей;</li>
-                        <li>новые идеи могут внедряться долго.</li>
+                        <li>потеря потенциальных покупателей</li>
+                        <li>новые идеи долго внедряются</li>
                     </ul>
                 </div>
             </div>
@@ -43,14 +44,14 @@ registerSlide(10, `
                 <div>
                     <h3 class="option-section-title title-pros">Плюсы</h3>
                     <ul class="option-list list-pros">
-                        <li>можно развивать существующий сайт.</li>
+                        <li>не нужно переделывать с нуля</li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="option-section-title title-cons">Минусы</h3>
                     <ul class="option-list list-cons">
-                        <li>часть изменений ограничена текущей системой;</li>
-                        <li>сложнее быстро внедрять новые решения.</li>
+                        <li>новые идеи долго внедряются</li>
+                        <li><ul class="option-list list-cons" style="color: rgb(15, 23, 42); font-size: medium; background-color: rgb(255, 255, 255);"><li title="" style="color: rgb(71, 85, 105); outline-offset: 3px; border-radius: 3px; background: rgba(16, 185, 129, 0.06) !important;"><br></li></ul></li>
                     </ul>
                 </div>
             </div>
@@ -58,22 +59,22 @@ registerSlide(10, `
 
         <!-- Option 3 (Slightly highlighted as recommended variant) -->
         <div class="option-card option-recommended">
-            <h2 class="option-card-title">3. Создать новую платформу</h2>
+            <h2 class="option-card-title">3. Создать новый сайт</h2>
             <p class="option-card-desc">Сделать новый сайт с учетом всех выявленных проблем.</p>
             
             <div style="display: flex; flex-direction: column; gap: 1cqh; margin-top: auto;">
                 <div>
                     <h3 class="option-section-title title-pros">Плюсы</h3>
                     <ul class="option-list list-pros">
-                        <li>быстрее внедрять изменения;</li>
-                        <li>удобнее развивать сайт дальше;</li>
-                        <li>можно сразу построить правильную структуру каталога.</li>
+                        <li>быстрее внедрять и тестировать изменения;</li>
+                        <li>получать больше заявок</li>
+                        <li><br></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="option-section-title title-cons">Минусы</h3>
                     <ul class="option-list list-cons">
-                        <li>требует первоначальных вложений.</li>
+                        <li>требует переделки сайта с нуля</li>
                     </ul>
                 </div>
             </div>
@@ -85,4 +86,5 @@ registerSlide(10, `
         <p>Цель не просто заменить сайт. Цель — создать инструмент, который помогает получать больше заявок и быстрее реагировать на изменения.</p>
     </section>
 </div>
+
 `);

@@ -3818,5 +3818,49 @@ body {
     color: var(--color-text-muted);
 }
 
+/* ==================== GLOBAL EDITABILITY & POINTER-EVENTS OVERRIDES ==================== */
+/* Inactive slides and background containers must never capture clicks */
+.slide {
+    pointer-events: none !important;
+}
+
+.slide.active {
+    pointer-events: auto !important;
+}
+
+.deck-header, .company-tag, .technical-drawing, .deck-footer, .footer-note, .bg-grid {
+    pointer-events: none !important;
+}
+
+/* Ensure decorative elements, SVG icons, arrows, and pseudo-elements never intercept text editing clicks */
+svg, svg *, .b-dot, .browser-dots, .vertical-arrow, .vertical-arrow-svg, .tech-layer {
+    pointer-events: none !important;
+}
+
+/* Ensure pseudo elements don't intercept text editing clicks */
+*::before, *::after {
+    pointer-events: none !important;
+}
+
+/* Ensure buttons and navigation controls remain clickable */
+button, input, textarea, a, .nav-btn, .dot, .footer-navigation {
+    pointer-events: auto !important;
+}
+
+/* Force ALL editable text to sit at z-index: 999 above all cards, containers, headers, footers, and overlays */
+[contenteditable="true"] {
+    position: relative !important;
+    z-index: 999 !important;
+    pointer-events: auto !important;
+    cursor: text !important;
+    outline: none !important;
+}
+
+[contenteditable="true"]:focus {
+    outline: 2px solid var(--color-accent-green) !important;
+    outline-offset: 3px;
+    background: rgba(16, 185, 129, 0.06) !important;
+    border-radius: 3px;
+}
 
 

@@ -1,9 +1,10 @@
 registerSlide(9, `
+
 <div class="slide-main slide-9-layout">
     <!-- Headline & Subtitle -->
     <section class="title-section">
         <h1 class="slide-title">
-            Сайт — это не разовая работа.<br>
+            Сайт — это не разовая работа. Убрать<br>
             <span class="accent-green">Его нужно постоянно улучшать</span>
         </h1>
         <p class="slide-subtitle">
@@ -18,28 +19,28 @@ registerSlide(9, `
         <div class="process-cycle-container">
             <div class="cycle-grid">
                 <!-- Step 1 -->
-                <div class="cycle-step-box" style="grid-column: 1; grid-row: 1;">1. Посмотреть данные</div>
+                <div class="cycle-step-box" style="grid-area: 1 / 1;">1. Посмотреть данные</div>
                 
                 <!-- Arrow 1 -> 2 -->
-                <div class="cycle-arrow-horizontal" style="grid-column: 2; grid-row: 1;">→</div>
+                <div class="cycle-arrow-horizontal" style="grid-area: 1 / 2;">→</div>
                 
                 <!-- Step 2 -->
-                <div class="cycle-step-box" style="grid-column: 3; grid-row: 1;">2. Понять проблемы</div>
+                <div class="cycle-step-box" style="grid-area: 1 / 3;">2. Понять проблемы</div>
                 
                 <!-- Arrow 2 -> 3 -->
-                <div class="cycle-arrow-vertical" style="grid-column: 3; grid-row: 2;">→</div>
+                <div class="cycle-arrow-vertical" style="grid-area: 2 / 3;">→</div>
                 
                 <!-- Step 3 -->
-                <div class="cycle-step-box" style="grid-column: 3; grid-row: 3;">3. Внести улучшения</div>
+                <div class="cycle-step-box" style="grid-area: 3 / 3;">3. Внести улучшения</div>
                 
                 <!-- Arrow 3 -> 4 -->
-                <div class="cycle-arrow-horizontal" style="grid-column: 2; grid-row: 3;">←</div>
+                <div class="cycle-arrow-horizontal" style="grid-area: 3 / 2;">←</div>
                 
                 <!-- Step 4 -->
-                <div class="cycle-step-box" style="grid-column: 1; grid-row: 3;">4. Проверить результат</div>
+                <div class="cycle-step-box" style="grid-area: 3 / 1;">4. Проверить результат</div>
                 
                 <!-- Arrow 4 -> 1 -->
-                <div class="cycle-arrow-vertical" style="grid-column: 1; grid-row: 2;">←</div>
+                <div class="cycle-arrow-vertical" style="grid-area: 2 / 1;">←</div>
                 
                 <!-- Loop badge in center -->
                 <div class="repeat-center-badge">Повторять регулярно</div>
@@ -66,4 +67,5 @@ registerSlide(9, `
         <p>Главная задача — не просто сделать новый сайт, а создать возможность быстро его улучшать.</p>
     </section>
 </div>
+
 `);

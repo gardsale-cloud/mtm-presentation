@@ -6,6 +6,7 @@ registerSlide(3, `
 
 
 
+
 <div class="slide-main slide-3-layout">
     <!-- Left Column: Title + Vertical Funnel Schema -->
     <div class="left-content">
@@ -42,8 +43,8 @@ registerSlide(3, `
             <div class="funnel-step">
                 <div class="funnel-number-box">
                     <!-- EDITABLE VALUE (Percentage of active engagement) -->
-                    <span class="funnel-val">45%</span>
-                    <span class="funnel-unit">от первого</span>
+                    <span class="funnel-val">36%</span>
+                    <span class="funnel-unit"><br></span>
                 </div>
                 <div class="funnel-text-box">
                     <div class="funnel-title">Заинтересованно изучают сайт</div>
@@ -62,8 +63,8 @@ registerSlide(3, `
             <div class="funnel-step">
                 <div class="funnel-number-box">
                     <!-- EDITABLE VALUE (Percentage of contact view) -->
-                    <span class="funnel-val">8%</span>
-                    <span class="funnel-unit">от первого</span>
+                    <span class="funnel-val">1.8%</span>
+                    <span class="funnel-unit"><br></span>
                 </div>
                 <div class="funnel-text-box">
                     <div class="funnel-title">Открывают номер телефона или переходят к контакту</div>
@@ -82,8 +83,8 @@ registerSlide(3, `
             <div class="funnel-step step-highlight">
                 <div class="funnel-number-box">
                     <!-- EDITABLE VALUE (Percentage of leads) -->
-                    <span class="funnel-val">2%</span>
-                    <span class="funnel-unit">от первого</span>
+                    <span class="funnel-val">0.5%</span>
+                    <span class="funnel-unit"><br></span>
                 </div>
                 <div class="funnel-text-box">
                     <div class="funnel-title">Оставляют заявку</div>
@@ -100,7 +101,7 @@ registerSlide(3, `
             Эти показатели помогают понять, на каком этапе посетители перестают двигаться дальше.
         </p>
         <p class="right-card-text">
-            Если большое количество людей не доходит до заявки, значит есть причины, которые стоит найти и устранить.
+            Если только 0.5% посетителей доходит до заявки, значит есть причины, которые стоит найти и устранить.
         </p>
     </div>
 
@@ -109,6 +110,7 @@ registerSlide(3, `
         <p>Следующий шаг — понять, что именно мешает посетителям выбрать товар и оставить заявку.</p>
     </section>
 </div>
+
 
 
 

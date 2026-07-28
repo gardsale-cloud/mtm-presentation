@@ -1,6 +1,7 @@
 registerSlide(5, `
 
 
+
 <div class="slide-main slide-5-layout">
     <!-- Headline -->
     <section class="title-section">
@@ -9,7 +10,7 @@ registerSlide(5, `
             <span class="accent-green">Сайт вызывает меньше доверия</span>
         </h1>
         <p class="slide-subtitle">
-            Даже небольшие ошибки постепенно снижают доверие к компании. Особенно это заметно новым посетителям, которые впервые попали на сайт из рекламы.
+            Даже небольшие ошибки снижают доверие к компании. Особенно это заметно новым посетителям, которые впервые попали на сайт из рекламы.
         </p>
     </section>
 
@@ -135,7 +136,7 @@ registerSlide(5, `
             
             <!-- Screenshot Caption under display frame -->
             <div class="viewer-caption">
-                Скриншот: <span id="activeScreenshotCaption">Мобильная версия каталога</span> (Кликните для увеличения)
+                Скриншот: <span id="activeScreenshotCaption">Страницы отображается с ошибками</span> (Кликните для увеличения)
             </div>
         </div>
 
@@ -145,7 +146,7 @@ registerSlide(5, `
             <div class="problem-row-item active" data-problem-index="1" onmouseenter="activateProblem(1)">
                 <div class="item-number">1</div>
                 <div class="item-content">
-                    <h3 class="item-title">Мобильная версия каталога</h3>
+                    <h3 class="item-title">Страницы отображается с ошибками</h3>
                     <p class="item-desc">Карточки товаров отображаются некорректно. Часть элементов выходит за границы экрана.</p>
                 </div>
             </div>
@@ -155,7 +156,7 @@ registerSlide(5, `
                 <div class="item-number">2</div>
                 <div class="item-content">
                     <h3 class="item-title">Пустые разделы каталога</h3>
-                    <p class="item-desc">Некоторые разделы каталога пустые. У посетителя возникает вопрос: <span class="quote">«Компания действительно продает эти материалы?»</span></p>
+                    <p class="item-desc">Некоторые разделы каталога пустые</p>
                 </div>
             </div>
 
@@ -181,7 +182,11 @@ registerSlide(5, `
             <div class="problem-row-item" data-problem-index="5" onmouseenter="activateProblem(5)">
                 <div class="item-number">5</div>
                 <div class="item-content">
-                    <h3 class="item-title">Неоднородные карточки товаров</h3>
+                    <h3 class="item-title">
+
+
+
+<p class="p1"><b>Не во всех карточках заполнены характеристики</b></p></h3>
                     <p class="item-desc">На части товаров заполнены характеристики, на части — нет. Каталог выглядит неоднородным.</p>
                 </div>
             </div>
@@ -194,6 +199,7 @@ registerSlide(5, `
         <p>По отдельности эти проблемы кажутся небольшими. Но вместе они создают ощущение, что сайт развивается медленно и ему не уделяется достаточно внимания.</p>
     </section>
 </div>
+
 
 
 `);
