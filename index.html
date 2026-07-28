@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализ сайта и предложения по развитию — MTM Insulation</title>
+    <!-- Modern Typography: Plus Jakarta Sans & Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Link External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Initialize slide registration immediately for synchronous slide loading -->
+    <script>
+        window.presentationSlides = {};
+        window.registerSlide = function(num, htmlContent) {
+            window.presentationSlides[num] = htmlContent;
+        };
+    </script>
+</head>
+<body>
+    <!-- Slide Deck Player Container -->
+    <div class="slide-deck">
+        <!-- Blueprint Grid Pattern -->
+        <div class="bg-grid"></div>
+
+        <!-- Top Header (Shared across slides) -->
+        <header class="deck-header">
+            <div class="company-tag">MTM Insulation • Аналитика</div>
+            
+            <!-- Construction detail header (blueprint layer context) -->
+            <div class="technical-drawing">
+                <span class="tech-layer layer-facade">Облицовка</span>
+                <span class="tech-layer layer-insulation">Утеплитель</span>
+                <span class="tech-layer layer-wall">Стена</span>
+            </div>
+        </header>
+
+        <!-- Slide Transition Container (Populated dynamically via JS) -->
+        <div class="slides-container"></div>
+
+        <!-- Footer (Shared across slides, dots populated dynamically via JS) -->
+        <footer class="deck-footer">
+            <p class="footer-note" id="deckFooterNote">Анализ сайта и предложения по развитию</p>
+            <div class="footer-navigation">
+                <button class="nav-btn" onclick="prevSlide()" aria-label="Предыдущий слайд">←</button>
+                <div class="footer-dots"></div>
+                <button class="nav-btn" onclick="nextSlide()" aria-label="Следующий слайд">→</button>
+                <div class="footer-slide-info"><span id="currentSlideNum">01</span> / <span id="totalSlidesNum">22</span></div>
+            </div>
+        </footer>
+    <!-- Zoom Lightbox Modal overlay for Slide 5 -->
+    <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <div id="lightboxPlaceholder"></div>
+        </div>
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <!-- Load Slides (To add a new slide, just create a new script file and link it here) -->
+    <script src="slides/slide1.js"></script>
+    <script src="slides/slide2.js"></script>
+    <script src="slides/slide3.js"></script>
+    <script src="slides/slide4.js"></script>
+    <script src="slides/slide5.js"></script>
+    <script src="slides/slide6.js"></script>
+    <script src="slides/slide7.js"></script>
+    <script src="slides/slide8.js"></script>
+    <script src="slides/slide9.js"></script>
+    <script src="slides/slide10.js"></script>
+    <script src="slides/slide11.js"></script>
+    <script src="slides/slide12.js"></script>
+    <script src="slides/slide13.js"></script>
+    <script src="slides/slide14.js"></script>
+    <script src="slides/slide15.js"></script>
+    <script src="slides/slide16.js"></script>
+    <script src="slides/slide17.js"></script>
+    <script src="slides/slide18.js"></script>
+    <script src="slides/slide19.js"></script>
+    <script src="slides/slide20.js"></script>
+    <script src="slides/slide21.js"></script>
+    <script src="slides/slide22.js"></script>
+
+    <!-- Link External Javascript Presentation Controller Script -->
+    <script src="script.js" defer></script>
+</body>
+</html>
