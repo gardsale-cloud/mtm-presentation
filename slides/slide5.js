@@ -1,5 +1,6 @@
 registerSlide(5, `
 
+
 <div class="slide-main slide-5-layout">
     <!-- Headline -->
     <section class="title-section">
@@ -19,7 +20,7 @@ registerSlide(5, `
         <div class="screenshot-viewer-container">
             <div class="screenshot-display-frame">
                 <!-- Target 1: Mobile Catalog -->
-                <div class="preview-target" data-preview="1">
+                <div class="preview-target active" data-preview="1">
                     <div class="smartphone-frame">
                         <div class="phone-screen">
                             <div class="phone-header">MTM Insulation</div>
@@ -102,7 +103,7 @@ registerSlide(5, `
                 </div>
 
                 <!-- Target 5: Product Cards -->
-                <div class="preview-target active" data-preview="5">
+                <div class="preview-target" data-preview="5">
                     <div class="browser-frame">
                         <div class="browser-header">
                             <div class="browser-dots"><span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span></div>
@@ -134,14 +135,14 @@ registerSlide(5, `
             
             <!-- Screenshot Caption under display frame -->
             <div class="viewer-caption">
-                Скриншот: <span id="activeScreenshotCaption">Неоднородные карточки товаров</span> (Кликните для увеличения)
+                Скриншот: <span id="activeScreenshotCaption">Мобильная версия каталога</span> (Кликните для увеличения)
             </div>
         </div>
 
         <!-- Right: Detailed Problem list (Detail) -->
         <div class="problems-list">
             <!-- Row 1 -->
-            <div class="problem-row-item" data-problem-index="1" onmouseenter="activateProblem(1)">
+            <div class="problem-row-item active" data-problem-index="1" onmouseenter="activateProblem(1)">
                 <div class="item-number">1</div>
                 <div class="item-content">
                     <h3 class="item-title">Мобильная версия каталога</h3>
@@ -177,7 +178,7 @@ registerSlide(5, `
             </div>
 
             <!-- Row 5 -->
-            <div class="problem-row-item active" data-problem-index="5" onmouseenter="activateProblem(5)">
+            <div class="problem-row-item" data-problem-index="5" onmouseenter="activateProblem(5)">
                 <div class="item-number">5</div>
                 <div class="item-content">
                     <h3 class="item-title">Неоднородные карточки товаров</h3>
@@ -193,5 +194,6 @@ registerSlide(5, `
         <p>По отдельности эти проблемы кажутся небольшими. Но вместе они создают ощущение, что сайт развивается медленно и ему не уделяется достаточно внимания.</p>
     </section>
 </div>
+
 
 `);

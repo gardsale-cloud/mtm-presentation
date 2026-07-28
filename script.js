@@ -242,20 +242,6 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Click on screen to advance (excluding cards and interactive buttons)
-document.addEventListener('click', (e) => {
-    // If we clicked on or inside a contenteditable element, don't advance the slide
-    if (e.target.isContentEditable || e.target.closest('[contenteditable="true"]')) {
-        return;
-    }
-    
-    const slidesContainer = document.querySelector('.slides-container');
-    if (slidesContainer && slidesContainer.contains(e.target)) {
-        if (!e.target.closest('a, button, .flow-box, .pain-point-item, .funnel-step, .problem-card, .agenda-box, .analysis-box, .explanation-right-card, .highlight-conclusion-card, .problem-row-item, .screenshot-display-frame, .screenshot-placeholder-box, .screenshot-box-large, .scenario-mockup-frame')) {
-            nextSlide();
-        }
-    }
-});
 
 // Slide 5 Interaction: Hover on list items to change active screenshot mockup
 window.activateProblem = function(num) {

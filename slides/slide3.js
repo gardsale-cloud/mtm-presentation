@@ -5,6 +5,7 @@ registerSlide(3, `
 
 
 
+
 <div class="slide-main slide-3-layout">
     <!-- Left Column: Title + Vertical Funnel Schema -->
     <div class="left-content">
@@ -108,6 +109,7 @@ registerSlide(3, `
         <p>Следующий шаг — понять, что именно мешает посетителям выбрать товар и оставить заявку.</p>
     </section>
 </div>
+
 
 
 
