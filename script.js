@@ -69,6 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const excludedTags = ['SCRIPT', 'STYLE', 'SVG', 'PATH', 'IMG', 'BR', 'HR', 'INPUT', 'TEXTAREA'];
             if (excludedTags.includes(el.tagName)) return false;
 
+            // If a DIV contains child elements, treat it as a layout container, not a text block
+            if (el.tagName === 'DIV' && el.children.length > 0) return false;
+
             // Exclude footer navigation and technical drawing areas
             if (el.closest('.footer-navigation, .technical-drawing')) return false;
 
