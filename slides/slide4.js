@@ -1,6 +1,7 @@
 registerSlide(4, `
 
 
+
 <div class="slide-main slide-4-layout">
     <!-- Headline -->
     <section class="title-section">
@@ -41,6 +42,7 @@ registerSlide(4, `
         <p>Далее рассмотрим каждую проблему на конкретных примерах.</p>
     </section>
 </div>
+
 
 
 `);

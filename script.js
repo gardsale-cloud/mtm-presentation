@@ -122,7 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    showSlide(1);
+    const savedSlide = parseInt(localStorage.getItem('lastViewedSlide'));
+    const startSlide = (!isNaN(savedSlide) && savedSlide >= 1 && savedSlide <= totalSlides) ? savedSlide : 1;
+    showSlide(startSlide);
 });
 
 function saveCurrentSlide() {
@@ -192,6 +194,7 @@ function showSlide(n) {
     if (n > totalSlides) n = totalSlides;
 
     currentSlide = n;
+    localStorage.setItem('lastViewedSlide', n);
 
     // Toggle active slide
     const allSlides = document.querySelectorAll('.slide');
