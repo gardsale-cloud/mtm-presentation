@@ -3847,8 +3847,8 @@ button, input, textarea, a, .nav-btn, .dot, .footer-navigation {
     pointer-events: auto !important;
 }
 
-/* Force ALL editable text to sit at z-index: 999 above all cards, containers, headers, footers, and overlays */
-[contenteditable="true"] {
+/* Force ALL editable text to sit at z-index: 999 above all cards, containers, headers, footers, and overlays ONLY ON ACTIVE SLIDES */
+.slide.active [contenteditable="true"] {
     position: relative !important;
     z-index: 999 !important;
     pointer-events: auto !important;
@@ -3856,7 +3856,13 @@ button, input, textarea, a, .nav-btn, .dot, .footer-navigation {
     outline: none !important;
 }
 
-[contenteditable="true"]:focus {
+/* Ensure editable text inside inactive mockups/targets never intercepts clicks */
+.preview-target:not(.active) [contenteditable="true"] {
+    pointer-events: none !important;
+    z-index: auto !important;
+}
+
+.slide.active [contenteditable="true"]:focus {
     outline: 2px solid var(--color-accent-green) !important;
     outline-offset: 3px;
     background: rgba(16, 185, 129, 0.06) !important;

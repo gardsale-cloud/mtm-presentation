@@ -1,5 +1,6 @@
 registerSlide(10, `
 
+
 <div class="slide-main slide-10-layout">
     <!-- Headline & Subtitle -->
     <section class="title-section">
@@ -15,8 +16,8 @@ registerSlide(10, `
     <div class="options-grid-3">
         <!-- Option 1 -->
         <div class="option-card">
-            <h2 class="option-card-title">1. Оставить текущий сайт</h2>
-            <p class="option-card-desc">Оставить как есть</p>
+            <h2 class="option-card-title">1. Оставить как есть</h2>
+            <p class="option-card-desc">Ничего не менять</p>
             
             <div style="display: flex; flex-direction: column; gap: 1cqh; margin-top: auto;">
                 <div>
@@ -29,7 +30,7 @@ registerSlide(10, `
                     <h3 class="option-section-title title-cons">Минусы</h3>
                     <ul class="option-list list-cons">
                         <li>потеря потенциальных покупателей</li>
-                        <li>новые идеи долго внедряются</li>
+                        <li><br></li>
                     </ul>
                 </div>
             </div>
@@ -86,5 +87,6 @@ registerSlide(10, `
         <p>Цель не просто заменить сайт. Цель — создать инструмент, который помогает получать больше заявок и быстрее реагировать на изменения.</p>
     </section>
 </div>
+
 
 `);
