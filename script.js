@@ -58,71 +58,68 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.cursor = 'default';
     });
 
-    // Make text editable (avoiding nested editable elements)
-    const allElements = document.querySelectorAll('.slide *');
-    const editables = [];
+    const isLocal = window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    if (isLocal) {
+        // Make text editable (avoiding nested editable elements)
+        const allElements = document.querySelectorAll('.slide *');
+        const editables = [];
 
-    // Helper to determine if an element is a text container (leaf container of text)
-    const isTextContainer = function(el) {
-        const excludedTags = ['SCRIPT', 'STYLE', 'SVG', 'PATH', 'IMG', 'BR', 'HR', 'INPUT', 'TEXTAREA'];
-        if (excludedTags.includes(el.tagName)) return false;
+        // Helper to determine if an element is a text container
+        const isTextContainer = function(el) {
+            const excludedTags = ['SCRIPT', 'STYLE', 'SVG', 'PATH', 'IMG', 'BR', 'HR', 'INPUT', 'TEXTAREA'];
+            if (excludedTags.includes(el.tagName)) return false;
 
-        // If a DIV contains child elements, treat it as a layout container, not a text block
-        if (el.tagName === 'DIV' && el.children.length > 0) return false;
+            // Exclude footer navigation and technical drawing areas
+            if (el.closest('.footer-navigation, .technical-drawing')) return false;
 
-        // Exclude footer navigation and technical drawing areas
-        if (el.closest('.footer-navigation, .technical-drawing')) return false;
-
-        // Check if it actually contains text
-        const text = el.textContent.trim();
-        if (text.length === 0) return false;
-
-        // Block level/container tags that represent wrappers rather than single text blocks
-        const blockTags = ['DIV', 'SECTION', 'ARTICLE', 'HEADER', 'FOOTER', 'NAV', 'UL', 'OL', 'TABLE', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P'];
-        
-        for (let child of el.children) {
-            if (blockTags.includes(child.tagName)) {
-                return false; // If it contains block level layout structures, it's a wrapper, not the text block itself
+            // Check if element has any text nodes as direct children with actual content
+            let hasDirectText = false;
+            for (let node of el.childNodes) {
+                if (node.nodeType === Node.TEXT_NODE && node.nodeValue.trim().length > 0) {
+                    hasDirectText = true;
+                    break;
+                }
             }
-        }
-        return true;
-    };
+            
+            return hasDirectText;
+        };
 
-    allElements.forEach(el => {
-        if (isTextContainer(el) && el.tagName !== 'BUTTON') {
-            editables.push(el);
-        }
-    });
-
-    // Mark as editable but prevent nesting editables
-    editables.forEach(el => {
-        let ancestor = el.parentElement;
-        let hasEditableAncestor = false;
-        while (ancestor && !ancestor.classList.contains('slide')) {
-            if (editables.includes(ancestor)) {
-                hasEditableAncestor = true;
-                break;
+        allElements.forEach(el => {
+            if (isTextContainer(el) && el.tagName !== 'BUTTON') {
+                editables.push(el);
             }
-            ancestor = ancestor.parentElement;
-        }
+        });
 
-        if (!hasEditableAncestor) {
-            el.setAttribute('contenteditable', 'true');
-            el.setAttribute('title', ''); // Prevent parent title tooltips from showing on hover
-            el.style.outline = 'none';
+        // Mark as editable but prevent nesting editables
+        editables.forEach(el => {
+            let ancestor = el.parentElement;
+            let hasEditableAncestor = false;
+            while (ancestor && !ancestor.classList.contains('slide')) {
+                if (editables.includes(ancestor)) {
+                    hasEditableAncestor = true;
+                    break;
+                }
+                ancestor = ancestor.parentElement;
+            }
 
-            // Prevent event propagation
-            el.addEventListener('click', (e) => {
-                e.stopPropagation();
-            });
-            el.addEventListener('keydown', (e) => {
-                e.stopPropagation();
-            });
-            el.addEventListener('blur', () => {
-                saveCurrentSlide();
-            });
-        }
-    });
+            if (!hasEditableAncestor) {
+                el.setAttribute('contenteditable', 'true');
+                el.setAttribute('title', ''); // Prevent parent title tooltips from showing on hover
+                el.style.outline = 'none';
+
+                // Prevent event propagation
+                el.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                });
+                el.addEventListener('keydown', (e) => {
+                    e.stopPropagation();
+                });
+                el.addEventListener('blur', () => {
+                    saveCurrentSlide();
+                });
+            }
+        });
+    }
 
     showSlide(1);
 });
