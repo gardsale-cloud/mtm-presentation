@@ -74,8 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Check if element has any text nodes as direct children with actual content
             let hasDirectText = false;
-            for (let node of el.childNodes) {
-                if (node.nodeType === Node.TEXT_NODE && node.nodeValue.trim().length > 0) {
+            for (let i = 0; i < el.childNodes.length; i++) {
+                const node = el.childNodes[i];
+                if (node.nodeType === 3 && node.nodeValue && node.nodeValue.trim().length > 0) {
                     hasDirectText = true;
                     break;
                 }
