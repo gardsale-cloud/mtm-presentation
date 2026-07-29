@@ -4,78 +4,129 @@ registerSlide(2, `
 
 
 
-<div class="slide-main slide-2-layout">
-    <!-- Headline -->
-    <section class="title-section">
-        <h1 class="slide-title">
-            Каждый месяц компания вкладывает деньги,<br>
-            <span class="accent-green">чтобы привести покупателей на сайт.</span>
-        </h1>
-    </section>
 
-    <!-- Simple Schema of 4 Blocks -->
-    <section class="flowchart-simple-row">
-        <!-- Block 1: Advertising -->
-        <div class="flow-box">Реклама</div>
-        
-        <!-- Connector -->
-        <div class="flow-arrow-simple">
-            <svg viewBox="0 0 24 24" fill="none" class="simple-arrow-svg">
-                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-        </div>
 
-        <!-- Block 2: Website -->
-        <div class="flow-box box-highlight">Сайт</div>
 
-        <!-- Connector -->
-        <div class="flow-arrow-simple">
-            <svg viewBox="0 0 24 24" fill="none" class="simple-arrow-svg">
-                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-        </div>
 
-        <!-- Block 3: Lead -->
-        <div class="flow-box">Заявка</div>
 
-        <!-- Connector -->
-        <div class="flow-arrow-simple">
-            <svg viewBox="0 0 24 24" fill="none" class="simple-arrow-svg">
-                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-        </div>
 
-        <!-- Block 4: Sale -->
-        <div class="flow-box box-goal">Продажа</div>
-    </section>
 
-    <!-- Explanation Blocks (The leak reasons) -->
-    <section class="explanation-block">
-        <p class="explanation-intro">Если после перехода на сайт посетителю НЕУДОБНО:</p>
-        
-        <div class="pain-points-row">
-            <div class="pain-point-item">
-                <span class="pain-number">1</span>
-                <p>выбрать подходящий утеплитель</p>
+
+
+
+<div class="slide-main slide-3-layout">
+    <!-- Left Column: Title + Vertical Funnel Schema -->
+    <div class="left-content">
+        <!-- Headline -->
+        <section class="title-section">
+            <h1 class="slide-title">
+                Что происходит после перехода с рекламы на сайт?
+            </h1>
+        </section>
+
+        <!-- Vertical flowchart schema with replaceable numbers -->
+        <section class="vertical-funnel">
+            <!-- Block 1 -->
+            <div class="funnel-step">
+                <div class="funnel-number-box">
+                    <!-- EDITABLE VALUE (Number of visitors) -->
+                    <span class="funnel-val">1 950</span>
+                    <span class="funnel-unit">человек</span>
+                </div>
+                <div class="funnel-text-box">
+                    <div class="funnel-title">Посетители сайта</div>
+                    <div class="funnel-desc">Пришли на сайт из рекламы за месяц</div>
+                </div>
             </div>
-            <div class="pain-point-item">
-                <span class="pain-number">2</span>
-                <p>Разобраться в ассортименте</p>
+            
+            <!-- Vertical Arrow -->
+            <div class="vertical-arrow">
+                <svg viewBox="0 0 24 24" fill="none" class="vertical-arrow-svg">
+                    <path d="M12 5V19M12 19L6 13M12 19L18 13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
             </div>
-            <div class="pain-point-item">
-                <span class="pain-number">3</span>
-                <p>Оставить заявку</p>
+            
+            <!-- Block 2 -->
+            <div class="funnel-step">
+                <div class="funnel-number-box">
+                    <!-- EDITABLE VALUE (Percentage of active engagement) -->
+                    <span class="funnel-val">36%</span>
+                    <span class="funnel-unit"><br></span>
+                </div>
+                <div class="funnel-text-box">
+                    <div class="funnel-title">Заинтересованно изучают сайт</div>
+                    <div class="funnel-desc">Остаются на страницах и читают материалы более 60 секунд</div>
+                </div>
             </div>
-        </div>
+            
+            <!-- Vertical Arrow -->
+            <div class="vertical-arrow">
+                <svg viewBox="0 0 24 24" fill="none" class="vertical-arrow-svg">
+                    <path d="M12 5V19M12 19L6 13M12 19L18 13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </div>
+            
+            <!-- Block 3 -->
+            <div class="funnel-step">
+                <div class="funnel-number-box">
+                    <!-- EDITABLE VALUE (Percentage of contact view) -->
+                    <span class="funnel-val">1.8%</span>
+                    <span class="funnel-unit"><br></span>
+                </div>
+                <div class="funnel-text-box">
+                    <div class="funnel-title">Открывают номер телефона или переходят к контакту</div>
+                    <div class="funnel-desc">Проявляют интерес к способам прямой связи</div>
+                </div>
+            </div>
+            
+            <!-- Vertical Arrow -->
+            <div class="vertical-arrow">
+                <svg viewBox="0 0 24 24" fill="none" class="vertical-arrow-svg">
+                    <path d="M12 5V19M12 19L6 13M12 19L18 13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </div>
+            
+            <!-- Block 4: Final action -->
+            <div class="funnel-step step-highlight">
+                <div class="funnel-number-box">
+                    <!-- EDITABLE VALUE (Percentage of leads) -->
+                    <span class="funnel-val">0.5%</span>
+                    <span class="funnel-unit"><br></span>
+                </div>
+                <div class="funnel-text-box">
+                    <div class="funnel-title">Оставляют заявку</div>
+                    <div class="funnel-desc">Заполняют форму или запрашивают расчет материалов</div>
+                </div>
+            </div>
+        </section>
+    </div>
 
-        <p class="explanation-outro">то он уходит к конкурентам.</p>
-    </section>
+    <!-- Right Column: Explaining the numbers -->
+    <div class="explanation-right-card">
+        <h2 class="right-card-title">Что показывают эти цифры?</h2>
+        <p class="right-card-text">
+            Показатели помогают понять, на каком этапе посетители перестают двигаться к заказу.
+        </p>
+        <p class="right-card-text">
+            Если только 0.5% доходят до заявки — на сайте есть барьеры, которые стоит найти и устранить.
+        </p>
+    </div>
 
-    <!-- Bottom Highlighted Card -->
-    <section class="highlight-conclusion-card">
-        <p>Поэтому важно не только привлекать посетителей,&nbsp; &nbsp; но и помогать им быстро найти нужный товар и оставить заявку</p>
+    <!-- Full width bottom block for Slide 3 -->
+    <section class="highlight-conclusion-card" style="grid-column: span 2;">
+        <p>Следующий шаг — понять, что именно мешает посетителям выбрать товар и оставить заявку.</p>
     </section>
 </div>
+
+
+
+
+
+
+
+
+
+
 
 
 

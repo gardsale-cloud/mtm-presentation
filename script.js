@@ -51,12 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         totalSlidesText.textContent = String(totalSlides).padStart(2, '0');
     }
     
-    // Completely disable and remove all Lightbox/modal click zoom overlays and tooltips
-    document.querySelectorAll('[onclick*="openLightbox"], [title*="увеличить"], [title*="увеличения"], [title*="Увеличить"]').forEach(el => {
-        el.removeAttribute('onclick');
-        el.removeAttribute('title');
-        el.style.cursor = 'default';
-    });
 
     // Enable editing only if we are not on the production GitHub Pages URL
     const isProduction = window.location.hostname.includes('github.io');
@@ -75,7 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
             '.screenshot-card-title',
             '.col-card-title',
             '.right-card-title',
-            '.right-card-text'
+            '.right-card-text',
+            '.timeline-text', '.timeline-label', '.test-details-title'
         ];
 
         document.querySelectorAll('.slide *').forEach(el => {
@@ -270,29 +265,43 @@ window.activateProblem = function(num) {
     }
 };
 
-// Generic Zoom Lightbox
 window.openLightbox = function(el) {
-    let sourceEl = null;
+    let imgElement = null;
     let captionText = "";
     
-    // If called with a specific element (e.g. onclick="openLightbox(this)")
     if (el) {
-        sourceEl = el;
+        // If el is an IMG tag, use it
+        if (el.tagName === 'IMG') {
+            imgElement = el;
+        } else {
+            // Check if el has an img inside
+            imgElement = el.querySelector('img');
+        }
         
-        // Find a suitable caption from parent card title
-        const parentCard = el.closest('.screenshot-card-2x2, .screenshot-col-card, .scenario-col');
+        // Find caption text
+        const parentCard = el.closest('.screenshot-card-2x2, .screenshot-col-card, .scenario-col, .preview-target, .scenario-screenshot-box, .scenario-img-preview');
         if (parentCard) {
-            const titleEl = parentCard.querySelector('.screenshot-card-title, .col-card-title, .scenario-tag-label');
-            if (titleEl) {
-                captionText = titleEl.textContent;
+            // Try to find the heading text in scenario-img-preview first
+            const previewBox = el.closest('.scenario-img-preview');
+            const headerDiv = previewBox ? previewBox.querySelector('div') : null;
+            if (headerDiv) {
+                captionText = headerDiv.textContent;
+            } else {
+                const titleEl = parentCard.querySelector('.screenshot-card-title, .col-card-title, .scenario-tag-label, .item-title');
+                if (titleEl) {
+                    captionText = titleEl.textContent;
+                }
             }
         }
     } else {
-        // Fallback for Slide 5 active target
-        sourceEl = document.querySelector('.preview-target.active');
-        const captionElement = document.getElementById('activeScreenshotCaption');
-        if (captionElement) {
-            captionText = captionElement.textContent;
+        // Fallback for Slide 4 active target
+        const activeTarget = document.querySelector('.preview-target.active');
+        if (activeTarget) {
+            imgElement = activeTarget.querySelector('img');
+            const captionElement = document.getElementById('activeScreenshotCaption');
+            if (captionElement) {
+                captionText = captionElement.textContent;
+            }
         }
     }
     
@@ -300,21 +309,13 @@ window.openLightbox = function(el) {
     const placeholder = document.getElementById('lightboxPlaceholder');
     const modalCaption = document.getElementById('lightboxCaption');
     
-    if (!sourceEl || !modal || !placeholder) return;
+    if (!imgElement || !modal || !placeholder) return;
     
-    // Clone and display the content
-    placeholder.innerHTML = sourceEl.innerHTML;
-    
-    // If there is an image, make sure it responds nicely to resizing
-    const img = placeholder.querySelector('img');
-    if (img) {
-        img.style.maxWidth = '90vw';
-        img.style.maxHeight = '75vh';
-        img.style.objectFit = 'contain';
-    }
+    // Set the HTML with only the image
+    placeholder.innerHTML = `<img src="${imgElement.src}" style="max-width: 90vw; max-height: 75vh; object-fit: contain; border-radius: 4px; box-shadow: 0 10px 25px rgba(0,0,0,0.3);">`;
     
     if (modalCaption) {
-        modalCaption.textContent = captionText;
+        modalCaption.textContent = captionText ? captionText.replace(/^\d+\.\s*/, '').trim() : "Скриншот";
     }
     
     modal.classList.add('active');

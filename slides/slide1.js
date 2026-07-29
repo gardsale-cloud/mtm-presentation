@@ -8,6 +8,7 @@ registerSlide(1, `
 
 
 
+
 <div class="slide-main slide-1-layout">
     <!-- Left Content: Title + Sub Grid of text columns -->
     <div class="left-content">
@@ -24,7 +25,7 @@ registerSlide(1, `
             <div class="analysis-box">
                 <h2 class="section-title">За последние месяцы был проведен анализ:</h2>
                 <ul class="bullet-list">
-                    <li>работы рекламы;</li>
+                    <li>эффективности рекламы;</li>
                     <li>поведения посетителей на сайте;</li>
                     <li>удобства выбора товаров;</li>
                     <li>процесса отправки заявки.</li>
@@ -95,6 +96,7 @@ registerSlide(1, `
         </svg>
     </div>
 </div>
+
 
 
 

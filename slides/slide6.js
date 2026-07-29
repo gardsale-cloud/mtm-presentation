@@ -1,128 +1,114 @@
 registerSlide(6, `
 
-<div class="slide-main slide-6-layout">
-    <!-- Headline -->
+
+
+
+<div class="slide-main slide-7-layout">
+    <!-- Headline & Inline Explanation -->
     <section class="title-section">
         <h1 class="slide-title">
-            Проблема №2.<br>
-            <span class="accent-green">Покупателю сложно выбрать подходящий утеплитель</span>
+            Проблема №3.<br>
+            <span class="accent-green">Сайт ведет не к тому сценарию покупки</span>
         </h1>
-        <p class="slide-subtitle">
-            Большинство покупателей не знают точных названий материалов, их плотности или технических характеристик</p>
+        <p class="explanation-inline">
+            Покупатель строительных материалов редко готов сразу оформить заказ на сайте. Ему часто нужно:
+            узнать стоимость доставки <span class="bullet-dot">•</span>
+            уточнить наличие <span class="bullet-dot">•</span>
+            получить расчет количества <span class="bullet-dot">•</span>
+            задать вопрос специалисту.
+        </p>
     </section>
 
-    <!-- Comparison Grid (Left vs Right) -->
-    <div class="comparison-grid">
-        <!-- Left: What buyer knows -->
-        <div class="comparison-card card-buyer">
-            <h2 class="card-label">Что знает покупатель</h2>
-            <ul class="card-list">
-                <li>Нужно утеплить пол.</li>
-                <li>Нужно утеплить крышу.</li>
-                <li>Нужен утеплитель толщиной 100 мм.</li>
-                <li>Нужен недорогой вариант.</li>
-            </ul>
-        </div>
-
-        <!-- Right: What site offers -->
-        <div class="comparison-card card-site">
-            <h2 class="card-label">Что предлагает сайт</h2>
-            <ul class="card-list">
-                <li>Большой список похожих товаров.</li>
-                <li>Много сложных технических названий.</li>
-                <li>Не всегда заполнены характеристики в карточках.</li>
-                <li>Нужно самостоятельно разбираться, чем товары отличаются друг от друга.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- What will help the buyer section -->
-    <div class="solutions-container">
-        <h2 class="solutions-title">Что поможет покупателю выбрать материал</h2>
+    <!-- Comparison Grid (Currently vs Better Scenario) -->
+    <div class="scenario-comparison-grid">
         
-        <div class="solutions-grid">
-            <!-- Pill 1 -->
-            <div class="solution-pill">
-                <div class="solution-icon-box">
-                    <svg class="solution-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
-                        <line x1="9" y1="22" x2="9" y2="16"></line>
-                        <line x1="8" y1="6" x2="16" y2="6"></line>
-                        <circle cx="9" cy="11" r="1"></circle>
-                        <circle cx="15" cy="11" r="1"></circle>
-                        <circle cx="15" cy="16" r="1"></circle>
-                    </svg>
-                </div>
-                <span class="solution-text">Удобная навигация&nbsp; по назначению утеплителя</span>
+        <!-- Left: Current checkout scenario -->
+        <div class="scenario-col col-current">
+            <div class="scenario-title-row">
+                <span class="scenario-tag-label">Сейчас работает так</span>
+            </div>
+            
+            <!-- Flow steps -->
+            <div class="scenario-flow">
+                <span class="flow-step-pill">Посетитель</span>
+                <span class="flow-step-arrow">→</span>
+                <span class="flow-step-pill">Просмотр каталога</span>
+                <span class="flow-step-arrow">→</span>
+                <span class="flow-step-pill">
+
+
+
+<p class="p1">Требуется оформить заказ</p></span>
+                <span class="flow-step-arrow">→</span>
+                <span class="flow-step-pill" style="color: rgb(217, 119, 6); background: rgba(217, 119, 6, 0.05); border-color: rgba(217, 119, 6, 0.15);">
+
+
+
+<p class="p1">Не готов оформить заказ</p></span>
             </div>
 
-            <!-- Pill 2 -->
-            <div class="solution-pill">
-                <div class="solution-icon-box">
-                    <svg class="solution-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-                    </svg>
+            <!-- Screenshot placeholder 1 (Current Cart) -->
+            <div class="scenario-screenshot-box">
+                <div class="scenario-img-preview" style="height: 16cqh; display: flex; flex-direction: column; background: #f8fafc; border-radius: 8px; padding: 0.5cqh; border: 1px solid var(--color-line); cursor: pointer; transition: all 0.2s;" onclick="openLightbox(this.querySelector('img'))" onmouseover="this.style.borderColor='var(--color-primary-navy)'" onmouseout="this.style.borderColor='var(--color-line)'">
+                    <div style="font-size: 0.75cqw; font-weight: 600; text-align: center; margin-bottom: 0.3cqh; color: var(--color-primary-navy);">Текущее оформление заказа</div>
+                    <div style="flex: 1; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <img src="Issues/Screenshot%202026-07-29%20at%2013.21.24.png" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 4px;">
+                    </div>
                 </div>
-                <span class="solution-text">Удобные фильтры и сортировка</span>
-            </div>
-
-            <!-- Pill 3 -->
-            <div class="solution-pill">
-                <div class="solution-icon-box">
-                    <svg class="solution-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="16 3 21 3 21 8"></polyline>
-                        <line x1="4" y1="20" x2="21" y2="3"></line>
-                        <polyline points="21 16 21 21 16 21"></polyline>
-                        <line x1="15" y1="15" x2="21" y2="21"></line>
-                        <line x1="4" y1="4" x2="9" y2="9"></line>
-                    </svg>
+                <div class="scenario-caption-text">
+                    «Сценарий похож на интернет-магазин, хотя покупателю часто нужен расчет»
                 </div>
-                <span class="solution-text">Похожие товары и аналоги</span>
-            </div>
-
-            <!-- Pill 4 -->
-            <div class="solution-pill">
-                <div class="solution-icon-box">
-                    <svg class="solution-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                    </svg>
-                </div>
-                <span class="solution-text">Калькулятор количества материала</span>
-            </div>
-
-            <!-- Pill 5 -->
-            <div class="solution-pill">
-                <div class="solution-icon-box">
-                    <svg class="solution-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="18" y1="20" x2="18" y2="10"></line>
-                        <line x1="12" y1="20" x2="12" y2="4"></line>
-                        <line x1="6" y1="20" x2="6" y2="14"></line>
-                    </svg>
-                </div>
-                <span class="solution-text">Короткое описание отличий товаров</span>
-            </div>
-
-            <!-- Pill 6 -->
-            <div class="solution-pill">
-                <div class="solution-icon-box">
-                    <svg class="solution-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <polyline points="10 9 9 9 8 9"></polyline>
-                    </svg>
-                </div>
-                <span class="solution-text">Полностью заполненные характеристики</span>
             </div>
         </div>
+
+        <!-- Right: Improved lead scenario -->
+        <div class="scenario-col col-improved">
+            <div class="scenario-title-row">
+                <span class="scenario-tag-label">Можно сделать удобнее</span>
+            </div>
+
+            <!-- Flow steps -->
+            <div class="scenario-flow">
+                <span class="flow-step-pill">Посетитель</span>
+                <span class="flow-step-arrow">→</span>
+                <span class="flow-step-pill">Просмотр каталога</span>
+                <span class="flow-step-arrow">→</span>
+                <span class="flow-step-pill">Заявка на расчет (консультацию)</span>
+                <span class="flow-step-arrow">→</span>
+                <span class="flow-step-pill" style="color: var(--color-accent-green-dark); background: var(--color-accent-green-light); border-color: rgba(16, 185, 129, 0.2);">Менеджер / Продажа</span>
+            </div>
+
+            <!-- Screenshot placeholder 2 (Simple form) -->
+            <div class="scenario-screenshot-box">
+                <div style="display: flex; gap: 1cqw; height: 16cqh; align-items: stretch;">
+                    <div class="scenario-img-preview" style="flex: 1; display: flex; flex-direction: column; background: #f8fafc; border-radius: 8px; padding: 0.5cqh; border: 1px solid var(--color-line); cursor: pointer; transition: all 0.2s;" onclick="openLightbox(this.querySelector('img'))" onmouseover="this.style.borderColor='var(--color-accent-green)'" onmouseout="this.style.borderColor='var(--color-line)'">
+                        <div style="font-size: 0.75cqw; font-weight: 600; text-align: center; margin-bottom: 0.3cqh; color: var(--color-primary-navy);">Корзина в боковой панели</div>
+                        <div style="flex: 1; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                            <img src="Issues/Screenshot%202026-07-28%20at%2020.53.52.png" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 4px;">
+                        </div>
+                    </div>
+                    <div class="scenario-img-preview" style="flex: 1; display: flex; flex-direction: column; background: #f8fafc; border-radius: 8px; padding: 0.5cqh; border: 1px solid var(--color-line); cursor: pointer; transition: all 0.2s;" onclick="openLightbox(this.querySelector('img'))" onmouseover="this.style.borderColor='var(--color-accent-green)'" onmouseout="this.style.borderColor='var(--color-line)'">
+                        <div style="font-size: 0.75cqw; font-weight: 600; text-align: center; margin-bottom: 0.3cqh; color: var(--color-primary-navy);">Быстрая консультация</div>
+                        <div style="flex: 1; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                            <img src="Issues/Screenshot%202026-07-28%20at%2020.54.35.png" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 4px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="scenario-caption-text">
+                    «Более подходящий сценарий для строительных материалов»
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- Bottom Highlighted Card -->
     <section class="highlight-conclusion-card">
-        <p>Главная задача сайта — не просто показать каталог, а помочь покупателю быстро выбрать подходящий материал.</p>
+        <p>Сайт должен помогать начать диалог с менеджером, оставить заявку на расчет (или консультацию),&nbsp; а не заставлять покупателя самостоятельно принимать решение на неполных данных.</p>
     </section>
 </div>
+
+
+
 
 `);

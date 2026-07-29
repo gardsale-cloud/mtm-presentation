@@ -47,8 +47,8 @@ http.createServer((req, res) => {
     }
 
     // Serve static files
-    const cleanUrl = req.url.split('?')[0];
-    let filePath = path.join(__dirname, cleanUrl === '/' ? 'index.html' : cleanUrl);
+    const decodedUrl = decodeURIComponent(req.url.split('?')[0]);
+    let filePath = path.join(__dirname, decodedUrl === '/' ? 'index.html' : decodedUrl);
     const extname = String(path.extname(filePath)).toLowerCase();
     const mimeTypes = {
         '.html': 'text/html',

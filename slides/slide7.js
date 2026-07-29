@@ -1,126 +1,92 @@
 registerSlide(7, `
 
-<div class="slide-main slide-7-layout">
-    <!-- Headline & Inline Explanation -->
+
+
+
+
+
+
+<div class="slide-main slide-12-layout">
+    <!-- Headline & Subtitle -->
     <section class="title-section">
         <h1 class="slide-title">
-            Проблема №3.<br>
-            <span class="accent-green">Сайт ведет не к тому сценарию покупки</span>
+            Что можно улучшить ?
         </h1>
-        <p class="explanation-inline">
-            Покупатель строительных материалов редко готов сразу оформить заказ на сайте. Ему часто нужно:
-            узнать стоимость доставки <span class="bullet-dot">•</span>
-            уточнить наличие <span class="bullet-dot">•</span>
-            получить расчет количества <span class="bullet-dot">•</span>
-            задать вопрос специалисту.
-        </p>
+        <p class="slide-subtitle">
+
+
+
+<p class="p1">Ниже перечислены основные изменения. Полный список значительно больше.</p></p>
     </section>
 
-    <!-- Comparison Grid (Currently vs Better Scenario) -->
-    <div class="scenario-comparison-grid">
-        
-        <!-- Left: Current checkout scenario -->
-        <div class="scenario-col col-current">
-            <div class="scenario-title-row">
-                <span class="scenario-tag-label">Сейчас работает так</span>
+    <!-- 3 Cards Grid Mapping to the 3 Problems -->
+    <div class="cards-row-3" style="flex-grow: 1; align-content: center;">
+        <!-- Card 1: Matches Problem 1 (Trust/Bugs) -->
+        <div class="improvement-card">
+            <div class="card-illustration">
+                <!-- Trust / Shield illustration -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
             </div>
-            
-            <!-- Flow steps -->
-            <div class="scenario-flow">
-                <span class="flow-step-pill">Посетитель</span>
-                <span class="flow-step-arrow">→</span>
-                <span class="flow-step-pill">Корзина</span>
-                <span class="flow-step-arrow">→</span>
-                <span class="flow-step-pill">
-
-
-
-<p class="p1">Требуется оформить заказ</p></span>
-                <span class="flow-step-arrow">→</span>
-                <span class="flow-step-pill" style="color: rgb(217, 119, 6); background: rgba(217, 119, 6, 0.05); border-color: rgba(217, 119, 6, 0.15);">
-
-
-
-<p class="p1">Не готов оформить заказ</p></span>
-            </div>
-
-            <!-- Screenshot placeholder 1 (Current Cart) -->
-            <div class="scenario-screenshot-box">
-                <div class="scenario-mockup-frame">
-                    <div class="mock-cart-layout">
-                        <!-- Mock Header -->
-                        <div style="font-size: 6px; font-weight: 700; color: var(--color-primary-navy); border-bottom: 1px solid var(--color-line); padding-bottom: 2px;">Оформление заказа</div>
-                        <!-- Mock cart row 1 -->
-                        <div class="mock-cart-row">
-                            <span style="font-size: 5px; color: var(--color-text-main);">Минвата Роквул 50мм (3 уп.)</span>
-                            <span style="font-size: 5.5px; font-weight: 700; color: var(--color-primary-navy);">4 150 ₽</span>
-                        </div>
-                        <!-- Mock cart row 2 -->
-                        <div class="mock-cart-row">
-                            <span style="font-size: 5px; color: var(--color-text-main);">Пеноплэкс Комфорт (10 уп.)</span>
-                            <span style="font-size: 5.5px; font-weight: 700; color: var(--color-primary-navy);">4 500 ₽</span>
-                        </div>
-                        <!-- Form inputs sketch -->
-                        <div style="display: flex; gap: 4px; margin-top: 2px;">
-                            <div style="flex: 1; height: 10px; border: 1px solid var(--color-line); border-radius: 1px; background: #FFF;"></div>
-                            <div style="flex: 1; height: 10px; border: 1px solid var(--color-line); border-radius: 1px; background: #FFF;"></div>
-                        </div>
-                        <div style="height: 10px; border: 1px solid var(--color-line); border-radius: 1px; background: #FFF; width: 100%; margin-top: 2px;"></div>
-                        
-                        <!-- Block with questions marks representing buyer doubts -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2px; padding: 2px; background: rgba(217,119,6,0.04); border: 1px dashed rgba(217,119,6,0.2); border-radius: 2px;">
-                            <span style="font-size: 5px; color: rgb(217, 119, 6); font-weight: 700;">Вопросы по доставке и оплате?</span>
-                            <span style="font-size: 6px; font-weight: 800; color: rgb(217, 119, 6);">?</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="scenario-caption-text">
-                    «Сценарий похож на интернет-магазин, хотя покупателю часто нужен расчет»
-                </div>
-            </div>
+            <h2 class="improvement-card-title">1. Рост доверия к сайту</h2>
+            <ul class="improvement-card-list">
+                <li>исправление технических ошибок и отображения элементов;</li>
+                <li>единый и понятный формат цен;</li>
+                <li>заполнение или удадение пустых разделов&nbsp; каталога</li>
+            </ul>
         </div>
 
-        <!-- Right: Improved lead scenario -->
-        <div class="scenario-col col-improved">
-            <div class="scenario-title-row">
-                <span class="scenario-tag-label">Можно сделать удобнее</span>
+        <!-- Card 2: Matches Problem 2 (Hard to choose) -->
+        <div class="improvement-card">
+            <div class="card-illustration">
+                <!-- Help / Calculation illustration -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                    <line x1="8" y1="6" x2="16" y2="6"></line>
+                    <line x1="16" y1="14" x2="16" y2="18"></line>
+                    <line x1="16" y1="10" x2="16" y2="10"></line>
+                    <line x1="12" y1="10" x2="12" y2="18"></line>
+                    <line x1="8" y1="10" x2="8" y2="18"></line>
+                </svg>
             </div>
-
-            <!-- Flow steps -->
-            <div class="scenario-flow">
-                <span class="flow-step-pill">Посетитель</span>
-                <span class="flow-step-arrow">→</span>
-                <span class="flow-step-pill">Выбор материалов</span>
-                <span class="flow-step-arrow">→</span>
-                <span class="flow-step-pill">Заявка на расчет</span>
-                <span class="flow-step-arrow">→</span>
-                <span class="flow-step-pill" style="color: var(--color-accent-green-dark); background: var(--color-accent-green-light); border-color: rgba(16, 185, 129, 0.2);">Менеджер / Продажа</span>
-            </div>
-
-            <!-- Screenshot placeholder 2 (Simple form) -->
-            <div class="scenario-screenshot-box">
-                <div class="scenario-mockup-frame">
-                    <div class="mock-form-layout">
-                        <div class="mock-form-title">Заявка на расчет материалов</div>
-                        <div style="font-size: 5.5px; color: var(--color-text-muted); text-align: center; margin-bottom: 2px; line-height: 1.2;">Укажите, что нужно утеплить, и менеджер подготовит точный расчет стоимости</div>
-                        <div class="mock-form-input" style="display: flex; align-items: center; padding-left: 4px; font-size: 5.5px; color: var(--color-line);">Ваше имя</div>
-                        <div class="mock-form-input" style="display: flex; align-items: center; padding-left: 4px; font-size: 5.5px; color: var(--color-line);">Телефон *</div>
-                        <div class="mock-form-input" style="height: 20px; display: flex; align-items: flex-start; padding: 2px 4px; font-size: 5.5px; color: var(--color-line);">Какую задачу нужно решить? (например: утеплить пол на даче)</div>
-                        <button class="mock-form-btn">Получить расчет и консультацию</button>
-                    </div>
-                </div>
-                <div class="scenario-caption-text">
-                    «Более подходящий сценарий для строительных материалов»
-                </div>
-            </div>
+            <h2 class="improvement-card-title">2. Удобный выбор товара</h2>
+            <ul class="improvement-card-list">
+                <li>более компактный вид карточек товаров</li>
+                <li>удобные фильтры и сортировка, заметные категории по назначению (пол, крыша);</li>
+                <li>полные технические характеристики</li>
+                <li>калькулятор количества</li>
+            </ul>
         </div>
 
+        <!-- Card 3: Matches Problem 3 (Wrong Scenario/Checkout) -->
+        <div class="improvement-card accent-card">
+            <div class="card-illustration" style="color: var(--color-accent-green-dark);">
+                <!-- Request / Checkout illustration -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+            </div>
+            <h2 class="improvement-card-title" style="color: var(--color-accent-green-dark);">3. Быстрая и простая заявка</h2>
+            <ul class="improvement-card-list">
+                <li>фокус на быстрой отправке заявки на расчет (консультацию), а не "заказе"</li>
+            </ul>
+        </div>
     </div>
 
     <!-- Bottom Highlighted Card -->
     <section class="highlight-conclusion-card">
-        <p>Сайт должен помогать начать диалог с менеджером, а не заставлять покупателя самостоятельно принимать решение о заказе</p>
+        <p>Новый сайт должен стать не просто каталогом, а инструментом продаж, который помогает покупателю выбрать материал и обратиться в компанию.</p>
     </section>
 </div>
+
+
+
+
+
 
 `);
