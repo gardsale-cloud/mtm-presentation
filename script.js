@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
 
-    // Enable editing only if we are not on the production GitHub Pages URL
-    const isProduction = window.location.hostname.includes('github.io');
+    // Enable editing only if we are on local development (localhost or local files)
+    const isProduction = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1' && window.location.hostname !== '';
     if (!isProduction) {
         // Make text editable (avoiding nested editable elements)
         const editables = [];
